@@ -1,7 +1,9 @@
+// App.js
 import './App.css';
 import { WalletProvider } from './components/WalletProvider';
 import ConnectWallet from './components/ConnectWallet';
-import AdventureInteraction from './components/AdventureInteraction';
+import RegisterPlayer from './components/RegisterPlayer';
+import MakeChoice from './components/MakeChoice';
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
       <div className="App">
         <h1>Aventure sur la blockchain</h1>
         <ConnectWallet />
-        <AdventureInteraction />
+        <RegisterPlayer />
+        <MakeChoice />
       </div>
     </WalletProvider>
   );
