@@ -20,37 +20,37 @@ function MakeChoice() {
           gasLimit: '200000', // Modification de la configuration de gas pour les réseaux sans EIP-1559
           gasPrice: await web3.eth.getGasPrice()
         });
-        alert('Choix enregistré avec succès !');
+        alert('Your choice is registered!');
       } catch (error) {
-        console.error('Erreur lors de l interaction avec le contrat:', error);
+        console.error('Something went wrong:', error);
       }
     } else {
-      alert('Connectez d\'abord votre wallet!');
+      alert('Please connect your wallet!');
     }
   };
 
   return (
     <div>
-      <h3>Faites votre choix pour l'étape</h3>
+      <h3 className="title-border-h3">Make your choice!</h3>
       <input
         type="text"
-        placeholder="ID de l'aventure"
+        placeholder="Adventure ID"
         value={adventureID}
         onChange={(e) => setAdventureID(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Numéro de l'étape"
+        placeholder="Step Number"
         value={stepNumber}
         onChange={(e) => setStepNumber(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Votre choix"
+        placeholder="Your choice"
         value={choice}
         onChange={(e) => setChoice(e.target.value)}
       />
-      <button onClick={makeChoice}>Valider le choix</button>
+      <button onClick={makeChoice}>Validate</button>
     </div>
   );
 }

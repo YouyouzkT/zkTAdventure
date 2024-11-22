@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: url('./assets/Adventure background.webp'); /* Chemin vers votre image */
+  background-size: cover; /* Adapte l'image à la taille de la page */
+  background-repeat: no-repeat; /* Évite de répéter l'image */
+  background-attachment: fixed; /* Garde le fond fixe */
+  background-position: center; /* Centre l'image */
+}
+
+.title-border {
+  border: 3px solid #ffcc00; /* Couleur du cadre */
+  color: #ffcc00; /* Couleur du texte identique à celle du cadre */
+  padding: 10px; /* Espacement à l'intérieur du cadre */
+  border-radius: 5px; /* Arrondir les coins du cadre */
+  display: inline-block; /* Pour que le cadre s'adapte à la taille du titre */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre pour un effet plus sympa */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour améliorer la lisibilité */
+}
+
+.title-border-h3 {
+  border: 2px solid #ffcc00; /* Couleur du cadre */
+  color: #ffcc00; /* Couleur du texte identique à celle du cadre */
+  padding: 5px 10px; /* Espacement à l'intérieur du cadre */
+  border-radius: 3px; /* Arrondir les coins du cadre */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Ajoute une ombre légère */
+  text-align: center; /* Centre le texte à l'intérieur du cadre */
+  display: inline-block; /* Pour que le cadre occupe uniquement la largeur du texte */
+  margin: 20px; /* Espacement de 20px sur tous les côtés */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour améliorer la lisibilité */
+}

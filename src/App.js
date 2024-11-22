@@ -9,7 +9,7 @@ function App() {
   return (
     <WalletProvider>
       <div className="App">
-        <h1>Aventure sur la blockchain</h1>
+        <h1 className="title-border">zkT Adventure 3.0 Onchain</h1>
         <ConnectWallet />
         <RegisterPlayer />
         <MakeChoice />

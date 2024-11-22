@@ -19,31 +19,31 @@ function RegisterPlayer() {
           gasLimit: '200000', // Modification de la configuration de gas pour les réseaux sans EIP-1559
           gasPrice: await web3.eth.getGasPrice()
         });
-        alert('Vous êtes inscrit avec succès !');
+        alert('Welcome adventurer 3.0!');
       } catch (error) {
-        console.error('Erreur lors de l inscription :', error);
+        console.error('Registering error :', error);
       }
     } else {
-      alert('Connectez d\'abord votre wallet!');
+      alert('Please connect your wallet!');
     }
   };
 
   return (
     <div>
-      <h3>Inscription à l'aventure</h3>
+      <h3 className="title-border-h3">Register yourself to a zkT Adventure!</h3>
       <input
         type="text"
-        placeholder="ID de l'aventure"
+        placeholder="Adventure ID"
         value={adventureID}
         onChange={(e) => setAdventureID(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Votre pseudo"
+        placeholder="Pseudo"
         value={pseudo}
         onChange={(e) => setPseudo(e.target.value)}
       />
-      <button onClick={register}>S'inscrire</button>
+      <button onClick={register}>Register</button>
     </div>
   );
 }
