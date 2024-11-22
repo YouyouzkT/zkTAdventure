@@ -4,6 +4,7 @@ import { WalletProvider } from './components/WalletProvider';
 import ConnectWallet from './components/ConnectWallet';
 import RegisterPlayer from './components/RegisterPlayer';
 import MakeChoice from './components/MakeChoice';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <ConnectWallet />
         <RegisterPlayer />
         <MakeChoice />
+        <Footer /> {/* Ajout du footer ici */}
       </div>
     </WalletProvider>
   );
