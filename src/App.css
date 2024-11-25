@@ -66,3 +66,12 @@ body {
   margin: 20px; /* Espacement de 20px sur tous les côtés */
   background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour améliorer la lisibilité */
 }
+
+.stats-box {
+  display: inline-block; /* Pour ajuster la largeur au contenu */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
