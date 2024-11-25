@@ -5,7 +5,7 @@ import contractABI from '../contractABI.json';
 import Web3 from 'web3';
 
 function PlayerStats() {
-  const { web3 } = useContext(WalletContext);
+  const { web3, account } = useContext(WalletContext);
   const [adventureID, setAdventureID] = useState('');
   const [aliveCount, setAliveCount] = useState(null);
   const [deadCount, setDeadCount] = useState(null);
@@ -13,6 +13,7 @@ function PlayerStats() {
   const [alivePlayers, setAlivePlayers] = useState([]);
   const [deadPlayers, setDeadPlayers] = useState([]);
   const [winnerPlayers, setWinnerPlayers] = useState([]);
+  const [playerStatus, setPlayerStatus] = useState('');
   const contractAddress = "0x2Bd681591C62570e4B2940F1B370d28945C14be8";
 
   const getStats = async () => {
@@ -36,6 +37,17 @@ function PlayerStats() {
         console.log("Nombre de gagnants :", winners);
         setWinnerCount(winners.toString());
         setWinnerPlayers(winnerPseudos);
+
+        // Determine player's status
+        if (aliveAddresses.includes(account)) {
+          setPlayerStatus('🤠Alive🤠');
+        } else if (deadAddresses.includes(account)) {
+          setPlayerStatus('😵Dead😵');
+        } else if (winnerAddresses.includes(account)) {
+          setPlayerStatus('🥳Winner🥳');
+        } else {
+          setPlayerStatus('😟Not Registered😟');
+        }
       } catch (error) {
         console.error('Erreur lors de la récupération des statistiques :', error);
         alert('Erreur lors de la récupération des statistiques : ' + error.message);
@@ -47,7 +59,7 @@ function PlayerStats() {
 
   return (
     <div className="stats-box">
-      <h3 className="title-border-h3">Adventure stat!</h3>
+      <h3 className="title-border-h3">Adventure info</h3>
       <input
         type="text"
         placeholder="Adventure ID"
@@ -57,6 +69,11 @@ function PlayerStats() {
       <button onClick={getStats}>Get Stat</button>
       {aliveCount !== null && (
         <div>
+          {playerStatus && (
+        <div>
+          <p><strong>Your Status:</strong> {playerStatus}</p>
+        </div>
+      )}
           <p><strong>⚔️Alive Adventurer⚔️ :</strong> {aliveCount}</p>
           <ul>
             {alivePlayers.map((pseudo, index) => (
@@ -85,6 +102,7 @@ function PlayerStats() {
           </ul>
         </div>
       )}
+      
     </div>
   );
 }

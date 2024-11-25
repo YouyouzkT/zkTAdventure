@@ -75,3 +75,61 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
 }
+
+.styled-link {
+  color: #FFD700; /* Texte doré */
+  background-color: #000; /* Fond noir */
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 15px; /* Taille de la police augmentée */
+}
+
+.styled-link:hover {
+  text-decoration: underline;
+}
+
+.nav-links {
+  margin-top: 20px;
+}
+
+.link-navigation {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.spacing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 10px; /* Ajoute une marge de 10 pixels autour des boutons */
+  padding: 10px; /* Ajoute de l'espace interne au bouton */
+  background-color: black;
+  color: #FFD700; /* Couleur or */
+  border: 2px solid #FFD700; /* Bordure or */
+  padding: 10px 20px;
+  border-radius: 8px; /* Coins arrondis */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #FFD700; /* Or en surbrillance */
+  color: black; /* Texte noir quand survolé */
+  border: 2px solid black; /* Bordure noire lorsque le bouton est survolé */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px #FFD700; /* Ombre dorée pour mettre en évidence le focus */
+}
+
+.connect-wallet {
+  position: absolute;
+  top: 20px;  /* Adjust to control the distance from the top */
+  right: 20px;  /* Adjust to control the distance from the right */
+}
+
