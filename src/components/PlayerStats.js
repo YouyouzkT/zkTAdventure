@@ -57,7 +57,7 @@ function PlayerStats() {
       <button onClick={getStats}>Get Stat</button>
       {aliveCount !== null && (
         <div>
-          <p>Alive Adventurer : {aliveCount}</p>
+          <p><strong>⚔️Alive Adventurer⚔️ :</strong> {aliveCount}</p>
           <ul>
             {alivePlayers.map((pseudo, index) => (
               <li key={index}>{pseudo}</li>
@@ -67,17 +67,17 @@ function PlayerStats() {
       )}
       {deadCount !== null && (
         <div>
-          <p>Dead Adventurer : {deadCount}</p>
+          <p><strong>🪦Dead Adventurer🪦 :</strong> {deadCount}</p>
           <ul>
             {deadPlayers.map((pseudo, index) => (
-              <li key={index}>{pseudo}</li>
+              <li key={index} style={{ textDecoration: 'line-through' }}>{pseudo}</li>
             ))}
           </ul>
         </div>
       )}
       {winnerCount !== null && (
         <div>
-          <p>Winners : {winnerCount}</p>
+          <p><strong>👑Winners👑 :</strong> {winnerCount}</p>
           <ul>
             {winnerPlayers.map((pseudo, index) => (
               <li key={index}>{pseudo}</li>
