@@ -6,7 +6,7 @@ import Web3 from 'web3';
 
 function StartAdventure() {
   const { web3 } = useContext(WalletContext);
-  const contractAddress = "0x2Bd681591C62570e4B2940F1B370d28945C14be8";
+  const contractAddress = "0x1EbC0418Ad5DE6375fD27BbcEd91cCdf3Fc95203";
   const [adventureID, setAdventureID] = useState('');
   const [isStarting, setIsStarting] = useState(false);
 

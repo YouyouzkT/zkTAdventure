@@ -368,6 +368,30 @@
 				"internalType": "uint256",
 				"name": "adventureID",
 				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "stepNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "getStepChoices",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "adventureID",
+				"type": "uint256"
 			}
 		],
 		"name": "getStepResults",
@@ -433,6 +457,30 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "adventureID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "stepNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "getYourChoice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
 			},
@@ -457,11 +505,6 @@
 			{
 				"internalType": "uint256",
 				"name": "currentStep",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "choice",
 				"type": "uint256"
 			}
 		],

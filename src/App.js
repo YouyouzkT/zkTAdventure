@@ -20,6 +20,7 @@ function App() {
           <nav className="link-navigation">
             <Link to="/" className="styled-link">PLAY</Link> | <Link to="/setup" className="styled-link">Set Up a New Adventure</Link>
           </nav>
+          <main className="main-content">
           <Routes>
             <Route path="/" element={
               <>
@@ -30,6 +31,7 @@ function App() {
             } />
             <Route path="/setup" element={<SetupAdventure />} />
           </Routes>
+          </main>
           <Footer />
         </div>
       </Router>
