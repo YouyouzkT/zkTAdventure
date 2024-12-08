@@ -110,30 +110,33 @@ function MakeChoice() {
   };
 
   return (
-    <div>
-      <h3 className="title-border-h3">Make your choice!</h3>
-      <input
-        type="text"
-        placeholder="Adventure ID"
-        value={adventureID}
-        onChange={(e) => setAdventureID(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Step Number"
-        value={stepNumber}
-        onChange={(e) => setStepNumber(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Your choice"
-        value={choice}
-        onChange={(e) => setChoice(e.target.value)}
-      />
-      <button onClick={makeChoice} disabled={isMakingChoice}>
-        {isMakingChoice ? 'Validating...' : 'Validate'}
-      </button>
-      <div className="stats-box">
+    <div className="choice-container">
+      <div className="make-choice">
+        <h3 className="title-border-h3">Make your choice!</h3>
+        <input
+          type="text"
+          placeholder="Adventure ID"
+          value={adventureID}
+          onChange={(e) => setAdventureID(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Step Number"
+          value={stepNumber}
+          onChange={(e) => setStepNumber(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Your choice"
+          value={choice}
+          onChange={(e) => setChoice(e.target.value)}
+        />
+        <button onClick={makeChoice} disabled={isMakingChoice}>
+          {isMakingChoice ? 'Validating...' : 'Validate'}
+        </button>
+      </div>
+  
+      <div className="step-info">
         <h3 className="title-border-h3">Step Information</h3>
         <h4>Available Choices:</h4>
         {availableChoices.length > 0 ? (
@@ -153,7 +156,7 @@ function MakeChoice() {
         )}
       </div>
     </div>
-  );
+  );  
 }
 
 export default MakeChoice;

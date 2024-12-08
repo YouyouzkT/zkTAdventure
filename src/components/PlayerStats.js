@@ -58,6 +58,7 @@ function PlayerStats() {
   };
 
   return (
+    <div className="stats-container">
     <div className="stats-box">
       <h3 className="title-border-h3">Adventure info</h3>
       <input
@@ -102,7 +103,7 @@ function PlayerStats() {
           </ul>
         </div>
       )}
-      
+    </div>
     </div>
   );
 }

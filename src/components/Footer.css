@@ -8,6 +8,7 @@
     width: 100%;
     margin-top: 10px;
     z-index: 10;
+    position: relative; /* Retiré du mode 'fixed' */
   }
   
   .footer-content {

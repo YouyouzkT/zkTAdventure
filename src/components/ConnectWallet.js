@@ -29,11 +29,11 @@ function ConnectWallet() {
   };
 
   return (
-    <div>
-      <button onClick={connectWallet}>
-        {account ? `Connected: ${account}` : 'Please connect your EVM wallet'}
-      </button>
-    </div>
+    <div className="connect-wallet">
+  <button onClick={connectWallet}>
+    {account ? `Connected: ${account}` : 'Please connect your EVM wallet'}
+  </button>
+</div>
   );
 }
 

@@ -4,7 +4,7 @@ import { WalletContext } from './WalletProvider';
 import contractABI from '../contractABI.json';
 import Web3 from 'web3';
 
-function CreateAdventure() {
+function CreateAdventure({ setAdventureID }) {
   const { web3 } = useContext(WalletContext);
   const contractAddress = "0x1EbC0418Ad5DE6375fD27BbcEd91cCdf3Fc95203";
   const [isCreating, setIsCreating] = useState(false);
@@ -15,13 +15,15 @@ function CreateAdventure() {
         setIsCreating(true);
         const contract = new web3.eth.Contract(contractABI, contractAddress);
         const accounts = await web3.eth.getAccounts();
-        await contract.methods.createAdventure().send({
+        const result = await contract.methods.createAdventure().send({
           from: accounts[0],
-          gasLimit: '200000', // Modification de la configuration de gas pour les réseaux sans EIP-1559
+          gasLimit: '200000',
           gasPrice: await web3.eth.getGasPrice(),
         });
-        
-        alert('Adventure created successfully!');
+
+        const newAdventureID = result.events.AdventureCreated.returnValues.adventureID; // Récupérer l'ID depuis l'événement
+        setAdventureID(newAdventureID); // Met à jour l'état partagé
+        alert(`Adventure created successfully! ID: ${newAdventureID}`);
       } catch (error) {
         console.error('Error creating adventure:', error);
         alert('Error creating adventure: ' + error.message);

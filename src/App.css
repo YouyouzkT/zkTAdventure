@@ -53,6 +53,7 @@ body {
   display: inline-block; /* Pour que le cadre s'adapte à la taille du titre */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre pour un effet plus sympa */
   background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour améliorer la lisibilité */
+  text-align: center; /* Centre le texte à l'intérieur du cadre */
 }
 
 .title-border-h3 {
@@ -67,14 +68,26 @@ body {
   background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour améliorer la lisibilité */
 }
 
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligne les enfants en haut */
+  height: auto; /* Permet à Flexbox de s’adapter */
+  gap: 20px; /* Espace entre les composants */
+  margin: 20px auto; /* Centre horizontalement */
+  padding: 20px; /* Ajoute un espace intérieur */
+}
+
 .stats-box {
-  display: inline-block; /* Pour ajuster la largeur au contenu */
-  margin-bottom: 200px; /* Espace pour ne pas toucher le footer */
-  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
-  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ddd;
   border-radius: 10px;
+  text-align: center;
+  max-width: 400px; /* Largeur maximale */
+  margin-top: 20px; /* Espace au-dessus */
+  min-height: 50px; /* Définit une hauteur minimale */
+  overflow-wrap: break-word; /* Permet de couper les mots longs */
 }
 
 .styled-link {
@@ -96,7 +109,7 @@ body {
 
 .link-navigation {
   position: absolute;
-  top: 10px;
+  top: 100px;
   left: 10px;
 }
 
@@ -162,4 +175,97 @@ input {
   flex: 1; /* Prend tout l'espace disponible au-dessus du footer */
   overflow-y: auto; /* Ajoute un scroll si le contenu est trop grand */
   padding-bottom: 150px; /* Préserve un espace pour le footer */
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Prend la hauteur complète de l'écran */
+}
+
+.content-wrap {
+  flex: 1; /* Occupe tout l'espace disponible au-dessus du footer */
+  justify-content: center; /* Centre les enfants horizontalement */
+  padding-bottom: 60px; /* Espace réservé pour le footer */
+  padding-top: 10px;
+}
+
+.connect-wallet {
+  position: absolute;
+  top: 12.5%; /* Place à 11.5% de la hauteur de la page */
+  right: 0px; /* Distance fixe par rapport au bord droit */
+  transform: translateY(-50%); /* Centre verticalement */
+  text-align: right; /* Alignement du texte à droite */
+}
+
+.player-container {
+  display: flex; /* Utilise Flexbox pour les aligner côte à côte */
+  justify-content: space-between; /* Espace entre les deux blocs */
+  align-items: flex-start; /* Aligne les deux en haut */
+  gap: 2px; /* Espace entre les composants */
+  margin: 20px auto; /* Centre horizontalement */
+  padding: 20px; /* Ajoute un espace intérieur */
+  max-width: 1200px; /* Limite la largeur totale */
+}
+
+.player-container > div {
+  flex: 1; /* Permet à chaque composant de prendre une part égale */
+  min-width: 300px; /* Largeur minimale pour éviter l'écrasement */
+}
+
+.choice-container {
+  display: flex; /* Active Flexbox */
+  justify-content: center; /* Centre les enfants horizontalement */
+  align-items: center; /* Centre les enfants verticalement */
+  gap: 20px; /* Espace entre Make Choice et Step Info */
+  height: 100%; /* S'assure que le conteneur utilise toute la hauteur disponible */
+}
+
+.choice-container > .make-choice {
+  flex: none !important; /* Empêche toute flexibilité */
+  min-width: unset; /* Supprime la largeur minimale imposée */
+  width: 270px !important; /* Fixe la largeur à 200px */
+}
+
+.make-choice {
+  box-sizing: border-box; /* Inclut padding et bordure dans la largeur */
+  width: 270px;
+  height: 363px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.step-info {
+  width: 270px; /* Largeur fixe */
+  height: 333px; /* Hauteur fixe */
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.step-info p,
+.step-info li {
+  max-width: 300px; /* Limite la largeur des paragraphes et des listes */
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  overflow: hidden; /* Cache les débordements */
+  text-overflow: ellipsis; /* Ajoute des points de suspension */
+}
+
+.step-info ul {
+  max-height: 100px; /* Limite la hauteur totale de la liste */
+  overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+  padding: 5px;
+}
+
+.make-choice input {
+  width: 150px; /* Largeur fixe pour tous les champs */
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }

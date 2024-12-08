@@ -4,10 +4,9 @@ import { WalletContext } from './WalletProvider';
 import contractABI from '../contractABI.json';
 import Web3 from 'web3';
 
-function SetStepCount() {
+function SetStepCount({ adventureID, setAdventureID }) {
   const { web3 } = useContext(WalletContext);
   const contractAddress = "0x1EbC0418Ad5DE6375fD27BbcEd91cCdf3Fc95203";
-  const [adventureID, setAdventureID] = useState('');
   const [stepCount, setStepCount] = useState('');
   const [isSetting, setIsSetting] = useState(false);
 
@@ -17,10 +16,11 @@ function SetStepCount() {
         setIsSetting(true);
         const contract = new web3.eth.Contract(contractABI, contractAddress);
         const accounts = await web3.eth.getAccounts();
-        await contract.methods.setStepCount(parseInt(adventureID), parseInt(stepCount)).send({ from: accounts[0],
-          gasLimit: '200000', // Modification de la configuration de gas pour les réseaux sans EIP-1559
+        await contract.methods.setStepCount(parseInt(adventureID), parseInt(stepCount)).send({
+          from: accounts[0],
+          gasLimit: '200000',
           gasPrice: await web3.eth.getGasPrice(),
-         });
+        });
         alert('Step count set successfully!');
       } catch (error) {
         console.error('Error setting step count:', error);
@@ -38,8 +38,8 @@ function SetStepCount() {
       <input
         type="text"
         placeholder="Adventure ID"
-        value={adventureID}
-        onChange={(e) => setAdventureID(e.target.value)}
+        value={adventureID} // Prérempli avec l'ID
+        onChange={(e) => setAdventureID(e.target.value)} // Permet la modification
       />
       <input
         type="text"

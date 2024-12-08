@@ -14,24 +14,27 @@ function App() {
   return (
     <WalletProvider>
       <Router>
-        <div className="App">
+      <div className="page-container">
           <h1 className="title-border">zkT Adventure 3.0 Onchain</h1>
           <ConnectWallet />
           <nav className="link-navigation">
             <Link to="/" className="styled-link">PLAY</Link> | <Link to="/setup" className="styled-link">Set Up a New Adventure</Link>
           </nav>
-          <main className="main-content">
+          <div className="content-wrap">
           <Routes>
             <Route path="/" element={
               <>
                 <RegisterPlayer />
+                <div className="player-container">
                 <MakeChoice />
+                </div>
                 <PlayerStats />
+                
               </>
             } />
             <Route path="/setup" element={<SetupAdventure />} />
           </Routes>
-          </main>
+          </div>
           <Footer />
         </div>
       </Router>
