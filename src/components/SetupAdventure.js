@@ -12,7 +12,7 @@ function SetupAdventure() {
   const [adventureID, setAdventureID] = useState(''); // État partagé pour Adventure ID
   console.log('Current Adventure ID in SetupAdventure:', adventureID); // Vérifie si l'état est mis à jour
   return (
-    <div className="setup-adventure-box stats-box">
+    <div className="setup-adventure-box">
       <h2 className="title-border-h2">Set Up a New Adventure</h2>
       {/* Passer setAdventureID à CreateAdventure */}
       <CreateAdventure setAdventureID={setAdventureID} />

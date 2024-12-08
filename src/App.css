@@ -81,7 +81,7 @@ body {
 .stats-box {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ddd;
+  border: 2px solid #FFD700; /* Doré */
   border-radius: 10px;
   text-align: center;
   max-width: 400px; /* Largeur maximale */
@@ -233,6 +233,7 @@ input {
   height: 363px;
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #FFD700; /* Doré */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -242,6 +243,7 @@ input {
   height: 333px; /* Hauteur fixe */
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #FFD700; /* Doré */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -268,4 +270,15 @@ input {
   border-radius: 5px;
   font-size: 16px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.setup-adventure-box {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #FFD700; /* Doré */
+  border-radius: 10px;
+  text-align: center;
+  max-width: 800px; /* Largeur maximale */
+  margin: 20px auto; /* Centre la boîte horizontalement */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
