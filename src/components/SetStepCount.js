@@ -48,7 +48,7 @@ function SetStepCount({ adventureID, setAdventureID }) {
         onChange={(e) => setStepCount(e.target.value)}
       />
       <button onClick={setStepCountHandler} disabled={isSetting}>
-        {isSetting ? 'Setting Step Count...' : 'Set Step Count'}
+        {isSetting ? 'Setting Step Count...' : '2- Set Step Count'}
       </button>
     </div>
   );

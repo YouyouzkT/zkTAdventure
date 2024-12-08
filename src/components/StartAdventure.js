@@ -41,7 +41,7 @@ function StartAdventure() {
         onChange={(e) => setAdventureID(e.target.value)}
       />
       <button onClick={startAdventureHandler} disabled={isStarting}>
-        {isStarting ? 'Starting Adventure...' : 'Start Adventure'}
+        {isStarting ? 'Starting Adventure...' : '4- Start Adventure'}
       </button>
     </div>
   );

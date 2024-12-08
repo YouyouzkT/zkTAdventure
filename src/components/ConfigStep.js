@@ -68,7 +68,7 @@ function ConfigStep() {
         />
       ))}
       <button onClick={configStepHandler} disabled={isConfiguring}>
-        {isConfiguring ? 'Configuring Step...' : 'Config Step'}
+        {isConfiguring ? 'Configuring Step...' : '3- Config Step'}
       </button>
     </div>
   );

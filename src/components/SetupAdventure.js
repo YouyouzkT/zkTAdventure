@@ -16,13 +16,17 @@ function SetupAdventure() {
       <h2 className="title-border-h2">Set Up a New Adventure</h2>
       {/* Passer setAdventureID à CreateAdventure */}
       <CreateAdventure setAdventureID={setAdventureID} />
+      <hr /> {/* Ligne de séparation */}
       <div className="spacing"></div>
       {/* Passer adventureID et setAdventureID à SetStepCount */}
       <SetStepCount adventureID={adventureID} setAdventureID={setAdventureID} />
+      <hr /> {/* Ligne de séparation */}
       <div className="spacing"></div>
       <ConfigStep />
+      <hr /> {/* Ligne de séparation */}
       <div className="spacing"></div>
       <StartAdventure />
+      <hr /> {/* Ligne de séparation */}
       <div className="spacing"></div>
       <div className="setup-adventure-box stats-box">
         <h2 className="title-border-h2">Resolve an Adventure Step</h2>

@@ -38,7 +38,7 @@ function CreateAdventure({ setAdventureID }) {
   return (
     <div className="create-adventure-box">
       <button onClick={createAdventure} disabled={isCreating}>
-        {isCreating ? 'Creating Adventure...' : 'Create Adventure'}
+        {isCreating ? 'Creating Adventure...' : '1- Create Adventure'}
       </button>
     </div>
   );
