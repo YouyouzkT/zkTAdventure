@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/zktadventure/static/css/main.5c2bef3f.css",
-    "main.js": "/zktadventure/static/js/main.5cf06863.js",
+    "main.js": "/zktadventure/static/js/main.694f2ab5.js",
     "static/js/453.54a7d955.chunk.js": "/zktadventure/static/js/453.54a7d955.chunk.js",
     "static/media/Adventure background.webp": "/zktadventure/static/media/Adventure background.b9b23d2fb16135d5fced.webp",
     "index.html": "/zktadventure/index.html",
     "main.5c2bef3f.css.map": "/zktadventure/static/css/main.5c2bef3f.css.map",
-    "main.5cf06863.js.map": "/zktadventure/static/js/main.5cf06863.js.map",
+    "main.694f2ab5.js.map": "/zktadventure/static/js/main.694f2ab5.js.map",
     "453.54a7d955.chunk.js.map": "/zktadventure/static/js/453.54a7d955.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c2bef3f.css",
-    "static/js/main.5cf06863.js"
+    "static/js/main.694f2ab5.js"
   ]
 }
