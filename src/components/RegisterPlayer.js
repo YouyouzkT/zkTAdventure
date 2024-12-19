@@ -9,7 +9,7 @@ function RegisterPlayer() {
   const [pseudo, setPseudo] = useState('');
   const [adventureID, setAdventureID] = useState('');
   const [isRegistering, setIsRegistering] = useState(false);
-  const contractAddress = "0x1EbC0418Ad5DE6375fD27BbcEd91cCdf3Fc95203";
+  const contractAddress = "0x0771c885A2257C62211730bf98E17817ABb9CbD5";
 
   const register = async () => {
     if (web3 && account) {
