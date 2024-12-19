@@ -282,3 +282,67 @@ input {
   margin: 20px auto; /* Centre la boîte horizontalement */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover; /* L'image s'ajuste à la largeur de l'écran */
+  }
+
+  .setup-adventure-box {
+    max-width: 95%; /* Réduit la largeur pour mieux s'adapter à l'écran */
+    padding: 15px; /* Réduit le padding */
+    margin: 10px auto; /* Réduit les marges */
+  }
+
+  .stats-box {
+    max-width: 95%; /* Réduit la largeur */
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .choice-container {
+    flex-direction: column; /* Empile les boîtes verticalement */
+    gap: 10px; /* Réduit l'espace entre les boîtes */
+  }
+
+  .make-choice,
+  .step-info {
+    width: 100%; /* Chaque boîte prend toute la largeur */
+    max-width: 100%; /* Supprime les limites de largeur */
+    margin: 0 auto;
+  }
+
+  .make-choice input,
+  .step-info ul {
+    width: 100%; /* Les inputs et listes s'étendent à 100% */
+  }
+
+  .button,
+  button {
+    width: 100%; /* Les boutons prennent toute la largeur */
+    font-size: 14px; /* Réduit légèrement la taille de la police */
+    padding: 10px; /* Ajuste l'espace intérieur */
+  }
+
+  .title-border,
+  .title-border-h3 {
+    font-size: 1.5rem; /* Réduit la taille des titres */
+    padding: 8px; /* Ajuste le padding */
+  }
+
+  .player-container {
+    flex-direction: column; /* Empile les composants */
+    gap: 15px; /* Espace entre les blocs */
+  }
+
+  .nav-links {
+    margin-top: 10px; /* Réduit l'espace supérieur */
+  }
+
+  input {
+    width: 100%; /* Les champs prennent toute la largeur */
+    max-width: 100%; /* Supprime les limites */
+    font-size: 14px; /* Police adaptée aux mobiles */
+    padding: 8px;
+  }
+}
